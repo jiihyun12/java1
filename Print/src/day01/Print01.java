@@ -9,3 +9,4 @@ public class Print01 {
 		System.out.println("햄버거,\n삼겹살,\n해장국");
 	}
 }
+
