@@ -2,9 +2,9 @@ package variableTest;
 
 public class FormatTest {
 	public static void main(String[] args) {
-		String name = "함지현";
+		String name = "홍길동";
 		int age = 20;
-		double height = 166.7;
+		double height = 185.7;
 		
 		System.out.printf("이름 : %s \n", name );
 		System.out.printf("나이 : %d \n", age);

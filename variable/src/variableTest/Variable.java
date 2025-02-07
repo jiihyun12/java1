@@ -22,6 +22,7 @@ public class Variable {
 //		System.out.println(c);
 //		System.out.println(d);
 //		System.out.println(e);
+//		System.out.println(f);
 		
 		// 변수 재할당 (변수의 값을 변경할 때는 자료형을 다시 선언할 필요 없음)
 		int data = 20; // 변수 선언 및 초기화
