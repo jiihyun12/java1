@@ -250,11 +250,7 @@ public class ArrayTask2 {
 //}
 
 
-
-
-
-
-// 강사님 풀이
+// 강사님 풀이 ===========================================================================
 //package arrayTask;
 //
 //import java.util.Scanner;
@@ -272,7 +268,7 @@ public class ArrayTask2 {
 //      
 //      입력 예) 안녕hI!!
 //      출력 예) 안녕Hi!!
-      Scanner sc = new Scanner(System.in);
+//      Scanner sc = new Scanner(System.in);
 //      String input = null, message = "대소문자를 바꿀 문자열을 입력하세요.", result = "";
 //      char[] arr1 = null;
 //      int count = 0, gap = 32;
@@ -385,11 +381,12 @@ public class ArrayTask2 {
 //      System.out.println("전체 문장: " + input3 + "\n찾으려고 하는 문자: " + find + "\n문자의 개수: " + foundCount);
 //
 //
-   }
-}
-      
+   
 // ========================================================================================      
 //   과제 :  메서드를 사용해서 간결하게 풀어보기
       
-      
 
+      
+	 }
+	}
+	     

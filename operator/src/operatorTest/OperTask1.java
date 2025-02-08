@@ -13,6 +13,19 @@ public class OperTask1 {
 //		183.5 -> 입력한 값은 실수입니다.
 //		삼항 연산자를 사용하기
 		
+		
+//		Scanner sc = new Scanner(System.in);
+//		double num1 = 0.0;
+//		String message = "정수 또는 실수 값을 입력하세요. ex) 10, 10.0", result = "";
+//		
+//		System.out.println(message);
+//		
+//		num1 = sc.nextDouble();	
+//		result = num1 % 1 == 0 ? "정수입니다." : "실수입니다.";
+//		
+//		System.out.println(result);
+
+		
 		Scanner sc = new Scanner(System.in);
 		double num1 = 0.0;
 		int num2 = 0;
