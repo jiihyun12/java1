@@ -58,8 +58,7 @@ public class ArrayTask2 {
 
 	      
 	      
-	      
-		
+	      	
 //      2) 정수를 한글로 변경
 //		입력한 값을 배열에 담고 
 //      입력 예) 1024
@@ -211,7 +210,7 @@ public class ArrayTask2 {
 //		
 	
 		
-		
+
 //      3) 문자열과 찾을 문자를 입력받고
 //      문자열에서 문자의 개수를 찾기
 //      예시) 입력: content cc!
@@ -385,8 +384,104 @@ public class ArrayTask2 {
 // ========================================================================================      
 //   과제 :  메서드를 사용해서 간결하게 풀어보기
       
+		
+//      1) 사용자에게 입력받은 문자열 중 소문자는 모두 대문자로
+//      대문자는 모두 소문자로 변경한다.
+		
+//		사용자한테 문자열을 입력받는다. - Scanner / nextLine
+//		입력받은 문자열의 길이만큼 반복문을 돌려서 문자 하나하나로 변환한다. - length / charAt	
+//		만약 입력받은 값이 대문자면 소문자로 , 소문자면 대문자로
+//		대문자 65-90 / 소문자 97-122
+//		대문자와 소문자간의 아스키 코드 차이 32
+//		대문자->소문자 +32 / 소문자 -> 대문자 -32
+		
+		
+//		Scanner sc = new Scanner(System.in);
+//		String message = "문자를 입력하세요. ex) 사과는 Apple", result = "";
+//		
+//		System.out.println(message);
+//		String input = sc.nextLine();
+//		
+//		for(int i = 0; i < input.length(); i++) {
+//			char cha = input.charAt(i);			
+////			System.out.println(cha);			
+//			if(cha >= 65 && cha <= 90) { 
+//				result += (char)(cha + 32);
+////				System.out.println(result);
+//			}else if(cha >= 97 && cha <= 122) {
+//				result += (char)(cha - 32);
+//			}else {
+//				result += cha;
+//			}		
+//		}
+//		System.out.println(result);
+		
+		
+//      2) 정수를 한글로 변경 =========================================
+//		입력한 값을 배열에 담고 
+//      입력 예) 1024
+//      출력 예) 일공이사
+		
+//		배열에 출력될 값 저장 char kor[] = {"일","이","삼","사","오","육","칠","팔,"구"};
+//		숫자를 입력 받는다- Scanner sc = new Scanner(System.in); 
+//		sc.nextInt();
+//		입렵 받은 숫자를 배열에 담는다. - int arr1 [] = null; // 일단 모르니까 초기화
+//		입력 받은 값의 길이만큼 반복을 돌린다.
+//		입력 받은 값을 하나하나 찾는다. charAt
+//		그 값 하나하나와 방 번호를 찾는다.
+		
+//		 String hangle = "공일이삼사오육칠팔구";
+//		 String numbers = "0123456789";
+//
+//		 Scanner sc = new Scanner(System.in);
+//		 
+//	     System.out.println("정수를 입력해주세요 ex) 1024");
+//	     String input = sc.next();
+//
+//	     String result = "";
+//
+//	     	for (int i = 0; i < input.length(); i++) {
+//	     		int index = numbers.indexOf(input.charAt(i));
+//	     			result += hangle.charAt(index);
+//	        }
+//
+//	        System.out.println(result);
+		
+
+		
+//      3) 문자열과 찾을 문자를 입력받고
+//      문자열에서 문자의 개수를 찾기
+//      예시) 입력: content cc!
+//          찾을문자 : c
+//          c의 개수 3개
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("문장을 입력해주세요 ex) apple");
+		String input = sc.nextLine();
+		
+		System.out.println("찾을 문자를 입력해주세요 ex) p");
+		String findInput = sc.nextLine();
+		
+		int count = 0;
+		
+//		for(int i = 0; i< input.length(); i++) {
+//			if(input.charAt(i) == findInput) {
+//				count++;
+//			}
+//		}
+		
+		System.out.println("전체 문장: " + input);
+        System.out.println("찾으려고 하는 문자: " + findInput);
+        System.out.println("문자의 개수: " + count);
+
 
       
 	 }
 	}
 	     
+
+
+
+
+

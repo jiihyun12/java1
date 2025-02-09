@@ -16,14 +16,24 @@ public class Arrtask1 {
 //			System.out.println(arData[i]);
 //		}
 		
-		// 풀이 2
-		int[] arrData = new int[10];
-			for(int i = 10; i >= 1; i-- ) {
-				if(i % 2 == 0) {
-					System.out.println(i);
-				}		
-			}
+		// 풀이 2 
+		int arrEven[] = new int[10];
+		for(int i = 0; i < arrEven.length; i++) {
+			int result = i + 1;
+				if(result % 2 == 0) {
+					System.out.println(10 + 1 - i);
+				}
+		}
+//		
+//		// 배열 없이
+//			for(int i = 10; i >= 1; i-- ) {
+//				if(i % 2 == 0) {
+//					System.out.println(i);
+//				}		
+//			}
 		
+			
+
 			
 			
 //		1~10까지 배열에 담고 출력

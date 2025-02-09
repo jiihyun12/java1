@@ -17,12 +17,18 @@ public class ArrayTest1 {
 //			System.out.println(arr2[i]);
 //		}
 		
+		
+		
 //		arr2 for문을 사용해서 5, 4, 3, 2, 1 순서대로 담고 출력하기
 //		5분
 		for(int i = 0; i < arr2.length; i++) {
 			arr2[i] = 5 - i;
 			System.out.println(arr2[i]);
 		}
+//		int arr1[] = new int[5];	
+//		for(int i = 1; i <= arr1.length; i++) {
+//			System.out.println(-i + 6);
+//		}
 		
 	}
 }
