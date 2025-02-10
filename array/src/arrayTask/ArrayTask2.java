@@ -465,11 +465,11 @@ public class ArrayTask2 {
 		
 		int count = 0;
 		
-//		for(int i = 0; i< input.length(); i++) {
-//			if(input.charAt(i) == findInput) {
-//				count++;
-//			}
-//		}
+		for(int i = 0; i < input.length(); i++) {
+			if(input.charAt(i) == findInput.charAt(0)) {
+				count++;
+			}
+		}
 		
 		System.out.println("전체 문장: " + input);
         System.out.println("찾으려고 하는 문자: " + findInput);
