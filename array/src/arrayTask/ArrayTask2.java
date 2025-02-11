@@ -396,25 +396,25 @@ public class ArrayTask2 {
 //		대문자->소문자 +32 / 소문자 -> 대문자 -32
 		
 		
-//		Scanner sc = new Scanner(System.in);
-//		String message = "문자를 입력하세요. ex) 사과는 Apple", result = "";
-//		
-//		System.out.println(message);
-//		String input = sc.nextLine();
-//		
-//		for(int i = 0; i < input.length(); i++) {
-//			char cha = input.charAt(i);			
-////			System.out.println(cha);			
-//			if(cha >= 65 && cha <= 90) { 
-//				result += (char)(cha + 32);
-////				System.out.println(result);
-//			}else if(cha >= 97 && cha <= 122) {
-//				result += (char)(cha - 32);
-//			}else {
-//				result += cha;
-//			}		
-//		}
-//		System.out.println(result);
+		Scanner sc = new Scanner(System.in);
+		String message = "문자를 입력하세요. ex) 사과는 Apple", result = "";
+		
+		System.out.println(message);
+		String input = sc.nextLine();
+		
+		for(int i = 0; i < input.length(); i++) {
+			char cha = input.charAt(i);			
+//			System.out.println(cha);			
+			if(cha >= 65 && cha <= 90) { 
+				result += (char)(cha + 32);
+//				System.out.println(result);
+			}else if(cha >= 97 && cha <= 122) {
+				result += (char)(cha - 32);
+			}else {
+				result += cha;
+			}		
+		}
+		System.out.println(result);
 		
 		
 //      2) 정수를 한글로 변경 =========================================
@@ -455,25 +455,25 @@ public class ArrayTask2 {
 //          찾을문자 : c
 //          c의 개수 3개
 		
-		Scanner sc = new Scanner(System.in);
-		
-		System.out.println("문장을 입력해주세요 ex) apple");
-		String input = sc.nextLine();
-		
-		System.out.println("찾을 문자를 입력해주세요 ex) p");
-		String findInput = sc.nextLine();
-		
-		int count = 0;
-		
-		for(int i = 0; i < input.length(); i++) {
-			if(input.charAt(i) == findInput.charAt(0)) {
-				count++;
-			}
-		}
-		
-		System.out.println("전체 문장: " + input);
-        System.out.println("찾으려고 하는 문자: " + findInput);
-        System.out.println("문자의 개수: " + count);
+//		Scanner sc = new Scanner(System.in);
+//		
+//		System.out.println("문장을 입력해주세요 ex) apple");
+//		String input = sc.nextLine();
+//		
+//		System.out.println("찾을 문자를 입력해주세요 ex) p");
+//		String findInput = sc.nextLine();
+//		
+//		int count = 0;
+//		
+//		for(int i = 0; i < input.length(); i++) {
+//			if(input.charAt(i) == findInput.charAt(0)) {
+//				count++;
+//			}
+//		}
+//		
+//		System.out.println("전체 문장: " + input);
+//        System.out.println("찾으려고 하는 문자: " + findInput);
+//        System.out.println("문자의 개수: " + count);
 
 
       

@@ -1,18 +1,16 @@
 package classTest;
 
+// 15분
 public class Company {
-//	회사 클래스 필드 구성하기
+//  회사 클래스 필드 구성하기
 //  이름, 나이, 수입
 //	회사의 총 수입
-	
 	static int money;
-	
 	String name;
 	int age;
 	int income;
-	
-
-	public Company() {;} 
+		
+	public Company() {;}
 	
 	public Company(String name, int age) {
 		this.name = name;
@@ -25,28 +23,40 @@ public class Company {
 //	3번 +2000원
 //	4번 -20000원
 //	각 회사의 총 수입을 출력하기
-	
 	public static void main(String[] args) {
 		Company employee1 = new Company("홍길동", 20);
 		Company employee2 = new Company("장보고", 30);
 		Company employee3 = new Company("이순신", 25);
-		Company employee4 = new Company("김유신", 35);
+		Company employee4 = new Company("김동건", 20);
+//		System.out.println(employee1.name);
 		
-		// 가독성을 위해 콤마 대신 언더바 사용
-		employee1.income += 10_000;
-		employee2.income += 1_000;
-		employee3.income += 2_000;
-		employee4.income -= 2_0000;
+		employee1.income += 70_000_000;
+		employee2.income += 1_000_000;
+		employee3.income += 2_000_000;
+		employee4.income -= 20_000_000;
 		
 		Company.money += employee1.income;
 		Company.money += employee2.income;
 		Company.money += employee3.income;
 		Company.money += employee4.income;
 		
-		System.out.println(Company.money);
+		System.out.println("총 수입 : " + Company.money);
 		
 		
 	}
-	
-	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

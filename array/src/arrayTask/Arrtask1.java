@@ -17,13 +17,13 @@ public class Arrtask1 {
 //		}
 		
 		// 풀이 2 
-		int arrEven[] = new int[10];
-		for(int i = 0; i < arrEven.length; i++) {
-			int result = i + 1;
-				if(result % 2 == 0) {
-					System.out.println(10 + 1 - i);
-				}
-		}
+//		int arrEven[] = new int[10];
+//		for(int i = 0; i < arrEven.length; i++) {
+//			int result = i + 1;
+//				if(result % 2 == 0) {
+//					System.out.println(10 + 1 - i);
+//				}
+//		}
 //		
 //		// 배열 없이
 //			for(int i = 10; i >= 1; i-- ) {
@@ -77,11 +77,11 @@ public class Arrtask1 {
 			
 			
 //		A~F까지 중 C를 제외하고 배열에 담은 후 출력
-//		char[] arData6 = new char[5];
-//		for(int i = 0; i < arData6.length; i++) {
-//			arData6[i] = (char)(i > 1 ? 65 + i + 1 : 65 + i);
-//			System.out.print(arData6[i]);
-//		}
+		char[] arData6 = new char[5];
+		for(int i = 0; i < arData6.length; i++) {
+			arData6[i] = (char)(i > 1 ? 65 + i + 1 : 65 + i);
+			System.out.print(arData6[i]);
+		}
 		
 			
 			

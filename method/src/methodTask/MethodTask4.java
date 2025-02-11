@@ -40,23 +40,23 @@ public class MethodTask4 {
 //	더 큰 값이 있으면 최댓값
 //	return으로 최솟값, 최댓값을 배열로 반환
 	
-//	int[] getMinMax1(int[] arrData) {
-//	    int[] minMax = new int[2]; 
-//	    
-//	    minMax[0] = arrData[0]; 
-//	    minMax[1] = arrData[0]; 
-//
-//	    for (int i = 1; i < arrData.length; i++) {
-//	        if (arrData[i] < minMax[0]) {
-//	        	minMax[0] = arrData[i];
-//	        }
-//	        if (arrData[i] > minMax[1]) {
-//	        	minMax[1] = arrData[i]; 
-//	        }
-//	    }
-//
-//	    return minMax; 
-//	}
+	int[] getMinMax1(int[] arrData) {
+	    int[] minMax = new int[2]; 
+	    
+	    minMax[0] = arrData[0]; 
+	    minMax[1] = arrData[0]; 
+
+	    for (int i = 1; i < arrData.length; i++) {
+	        if (arrData[i] < minMax[0]) {
+	        	minMax[0] = arrData[i];
+	        }
+	        if (arrData[i] > minMax[1]) {
+	        	minMax[1] = arrData[i]; 
+	        }
+	    }
+
+	    return minMax; 
+	}
 
 		
 	
@@ -90,19 +90,19 @@ public class MethodTask4 {
 //			한 글자씩 반복문 돌기
 //			해당 문자가 검색할 문자와 같으면 출력
 			
-	void indexOf(String srtAll, char searchChar) {
-		char[] resultArr = new char[srtAll.length()];
-		int count = 0;
-		for(int i = 0; i < srtAll.length(); i++) {
-			resultArr[i] = srtAll.charAt(i);
-			count++;
-		}
-		for(int i = 0; i < count; i++) {
-			if(resultArr[i] == searchChar) {
-				System.out.println("문자" + resultArr[i] + "문자의 위치" + i);				
-			}
-		}
-	};
+//	void indexOf(String srtAll, char searchChar) {
+//		char[] resultArr = new char[srtAll.length()];
+//		int count = 0;
+//		for(int i = 0; i < srtAll.length(); i++) {
+//			resultArr[i] = srtAll.charAt(i);
+//			count++;
+//		}
+//		for(int i = 0; i < count; i++) {
+//			if(resultArr[i] == searchChar) {
+//				System.out.println("문자" + resultArr[i] + "문자의 위치" + i);				
+//			}
+//		}
+//	};
 	
 	
 	
@@ -114,16 +114,16 @@ public class MethodTask4 {
 		MethodTask4 mt4 = new MethodTask4(); 
 		
 		// 4번 ===================================================================================
-//		int[] numbers = new int[5];
-//		System.out.println("정수를 5개 입력하세요:");		
-//        
-//        for (int i = 0; i < 5; i++) {
-//            numbers[i] = sc.nextInt();
-//        }
-//		
-//        int[] minMaxReturn = mt4.getMinMax1(numbers);
-//        
-//        System.out.println("최솟값 : " + minMaxReturn[0] + ", 최댓값 : " + minMaxReturn[1]);
+		int[] numbers = new int[5];
+		System.out.println("정수를 5개 입력하세요:");		
+        
+        for (int i = 0; i < 5; i++) {
+            numbers[i] = sc.nextInt();
+        }
+		
+        int[] minMaxReturn = mt4.getMinMax1(numbers);
+        
+        System.out.println("최솟값 : " + minMaxReturn[0] + ", 최댓값 : " + minMaxReturn[1]);
         
         
         
@@ -138,12 +138,12 @@ public class MethodTask4 {
         
         
 		// 6번 ===================================================================================
-		System.out.println("문자열을 입력하세요");
-		String inputStr1 = sc.nextLine();
-		
-		System.out.println("검색할 문자를 입력하세요");
-		String inputStr2 = sc.nextLine();
-		
+//		System.out.println("문자열을 입력하세요");
+//		String inputStr1 = sc.nextLine();
+//		
+//		System.out.println("검색할 문자를 입력하세요");
+//		String inputStr2 = sc.nextLine();
+//		
 //		mt4.indexOf(inputStr1, inputStr2);
 		
 	}

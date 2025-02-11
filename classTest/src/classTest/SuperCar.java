@@ -2,14 +2,17 @@ package classTest;
 
 import java.util.Scanner;
 
+// 자동차
 public class SuperCar {
 	// 추상화
-	String brand;
-	String color;
-	long price;
-	boolean engine;
-	String password;
-	int errorCount; // 클래스 필드의 초기화는 컴파일러가 자동으로 해준다. 
+	String brand; // ""
+	String color; // ""
+	long price; // 0L
+	boolean engine; // false
+	String password; // ""
+	int errorCount; // 0
+//	클래스 필드의 초기화는 컴파일러가 자동으로 해준다.
+	
 	
 //	초기화 블록
 //	클래스가 생성될 때 초기값을 넣어주기 위한 용도
@@ -25,47 +28,44 @@ public class SuperCar {
 	
 	public SuperCar() {;}
 	
-	public SuperCar(String brand, String color, long price, String passWord) {
-		this.brand = brand;
-		this.color = color;
-		this.price = price;
-		this.password = password;
-	}
-	
-	// 비밀번호 없이
 	public SuperCar(String brand, String color, long price) {
 		this.brand = brand;
 		this.color = color;
 		this.price = price;
-	}
+	} 
+	
+	public SuperCar(String brand, String color, long price, String password) {
+		this.brand = brand;
+		this.color = color;
+		this.price = price;
+		this.password = password;
+	} 
 	
 //	시동을 켜기
 	void engineStart() {
 		this.engine = true;
 	}
-	// 차에 탄다
-	// 비밀 번호 확인
-	// 시동을 켠다.
 	
 //	시동을 끄기
 	void engineStop() {
-		this.engine = false;
+		engine = false;
 	}
+	
 //	비밀번호 검사
 	public boolean checkPassword(String password) {
-		//equals 문자열에서 값이 같은지 비교한다. (== 사용X)
+//		문자열 .equals()
+//		문자열에서 값이 같은지 비교한다. (== 사용X)
 		return this.password.equals(password);
 	}
 	
-
 	public static void main(String[] args) {
 		SuperCar ferrari = new SuperCar("Ferrari", "Red", 700_000_000, "7777");
 		Scanner sc = new Scanner(System.in);
 		int choice = 0;
 		String password = null;
 		
-		while(true){
-			System.out.println("1. 시동 켜기 \n 2. 시동 끄기");
+		while(true) {
+			System.out.println("1. 시동 켜기\n2. 시동 끄기");
 			choice = sc.nextInt();
 			
 			if(choice == 1) { // 시동켜기
@@ -75,7 +75,7 @@ public class SuperCar {
 					if(ferrari.checkPassword(password)) {
 						ferrari.errorCount = 0;
 						ferrari.engineStart();
-						System.out.println(ferrari.brand + "시동 켜짐");
+						System.out.println(ferrari.brand + " 시동 켜짐");
 					}else {
 						ferrari.errorCount++;
 						if(ferrari.errorCount > 2) {
@@ -83,20 +83,41 @@ public class SuperCar {
 							break;
 						}
 					}
-				}else {
+				} else {
 					System.out.println("이미 시동이 켜져있습니다.");
 				}
-			}else if(choice ==2) { // 시동 끄기
+			} else if(choice == 2) { // 시동 끄기
 				if(ferrari.engine) {
 					ferrari.engineStop();
-					System.out.println(ferrari.brand + "시동 꺼짐");
+					System.out.println(ferrari.brand + " 시동 꺼짐");
 				}else {
-					System.out.println("이미 시동이 꺼져있습니다.");
+					System.out.println("이미 시동이 꺼져 있습니다.");
 				}
-			}else {
-				System.out.println("다시 눌러");
+			} else {
+				System.out.println("다시 누르세요");
 			}
 		}
+		
+		
 	}
 	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
