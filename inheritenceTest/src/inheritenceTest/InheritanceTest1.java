@@ -20,7 +20,7 @@ class B extends A{
 //	int data;
 	
 	public B() {
-		super(); // 상속을 물려받은 부모의 키워드를 호출해준다.
+//		super(); // 상속을 물려받은 부모의 키워드를 호출해준다.
 		// 생략이 돼있어도 자동으로 컴파일러가 호출한다.
 		// 부모 필드에 접근할 수 있는 주소값을 가지고있다.
 		System.out.println(this);

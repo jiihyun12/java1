@@ -1,13 +1,14 @@
 package castingTask2;
 
-public class Oak extends Character{
-
-	public Oak(String name, int level) {
-	     super(name, "오크", level);
-	 }
+public class Oak extends Monster {
+	public Oak() {;}
+	public Oak(String name, int hp, int experience) {
+		super(name, hp, experience);
+	}
 	
 	@Override
-	public void hunt() {
-		System.out.println(name + level + "가죽을 얻는다.");
+	void get() {
+		System.out.println("가죽을 얻었습니다.");
 	}
+	
 }
