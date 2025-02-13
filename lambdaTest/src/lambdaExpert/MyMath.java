@@ -28,34 +28,63 @@ import java.util.Scanner;
 
 public class MyMath {
 // 연산자 1개를 전달 받아서 알맞게 연산하도록 람다식 구현
-	public static Calc caculater(String oper) {
-		return null;
-	}
+	public static Calc calculator(String oper)
+	   {
+	      switch(oper) {
+	         case"+":
+	            Calc calcAdd = (num1, num2) -> {
+	               return num1 + num2;
+	            };
+	            return calcAdd;
+	            
+	         case "-":
+	            Calc calcSubtract = (num1, num2) -> {
+	               return num1 - num2;
+	            };
+	            return calcSubtract;
+	            
+	         case "/":
+	            Calc calcDevide = (num1, num2) -> {
+	               return num1 / num2;
+	            };
+	            return calcDevide;
+	            
+	         case "*":
+	            Calc calcMultiple = (num1, num2) -> {
+	               return num1 * num2;
+	            };
+	            return calcMultiple;
+	            
+	         case "%":
+	            Calc calcRemainder = (num1, num2) -> {
+	               return num1 % num2;
+	            };
+	            return calcRemainder;
+	            
+	      }
+	      return null;
+	   };
 	
-	Scanner sc = new Scanner(System.in);
-	int input = sc.nextInt();
+	
 	public static void main(String[] args) {
 		// 사용자가 수식을 입력
-//		Calc calc = () -> {}
-		
-		// 전체 수식에서 연산자만 분리하는 메서드를 구현
-//		"+" = (num1,num2) -> num1+num2;
-//		"-" = (num1,num2) -> num1-num2;
-		
-//		OperCheck getOperators = (result) -> result.split("|");
-		
-		
-//		String[] result = getOperators.getOpers(input);
+//		Scanner sc = new Scanner(System.in);
+//		System.out.println("수식을 입력해주세요");
+//		String input = sc.nextLine();
+//		
+//		// 전체 수식에서 연산자만 분리하는 메서드를 구현
+//		OperCheck operCheck = (String express) -> {
+//		
+//		};
 
 		
 		// 알맞게 연산 처리
-//		if-else
-//		while( ?? ; result.length
+		   
+		
+		
 	
-		
-		
-		
 		// 결과값을 출력
+		
 		
 	
 	}
