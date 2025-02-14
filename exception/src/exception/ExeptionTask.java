@@ -12,31 +12,43 @@ import java.util.Scanner;
 public class ExeptionTask {
 	public static void main(String[] args) {
 		int[] arData = new int[5];
-		
 		int count = 0;
-		
 		Scanner sc = new Scanner(System.in);
-		String expression = null, message = "정수 5개를 순서대로 입력하세요", exampleMessage="번 째 정수";
+		String expression = null, message="정수 5개를 순서대로 입력하세요\nq를 누르면 종료됩니다.", exampleMessage="번 째 정수";
 		
-		
+		System.out.println(message);
 		while(true) {
-			try {
-				count++;
-				System.out.println( count + exampleMessage);
-				expression = sc.next();
-				
-				if(expression.equals("q") || count == 5){
-					break;
-				}
-							
-			} catch (Exception e) {
-				arData[count - 1] = Integer.parseInt(exampleMessage);
-				System.out.println("유효하지 않은 범위니다.");		
-				e.printStackTrace();
+			count++;
+			System.out.println(count + exampleMessage);
+			expression = sc.next();
+			
+			if(expression.equals("q") || expression.equals("Q")) {
+				break;
 			}
+			
+			try {
+				arData[count - 1] = Integer.parseInt(expression);
+				arData[count] = 10;
+			} catch (ArrayIndexOutOfBoundsException e) {
+				System.out.println("5개 정수를 모두 입력했습니다.");
+				break;
+//				e.printStackTrace();
+			} catch (NumberFormatException e) {
+				System.out.println("정수를 입력하세요.");
+				count--;
+			} catch (Exception e) {
+				System.out.println("알 수 없는 오류 발생!");
+				e.printStackTrace();
+			} 
+			
+		}
+		
+		for(int num : arData) {
+			System.out.println(num);
 		}
 	}
 }
+
 
 
 
