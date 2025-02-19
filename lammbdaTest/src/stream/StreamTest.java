@@ -106,6 +106,14 @@ public class StreamTest {
 			ArrayList<Integer> even = new ArrayList<Integer>();
 			numbers.stream().filter((n)->n%2 ==0).forEach(even::add);
 			even.forEach(System.out::println);
+			
+			 StringBuilder result = new StringBuilder();
+		        for (char ch : korean.toCharArray()) {
+		            if (numMap.containsKey(ch)) {
+		                result.append(numMap.get(ch));
+		            }
+		        }
+		        return Integer.parseInt(result.toString());
 		
 	}
 }
