@@ -1,9 +1,8 @@
 package optionalTest;
 
-public class NoSearchUserException {
-	public NoSearchUserException() {;}
-	
-	public NoSearchUserException(String message) {
-		super(message);
-	};
+public class NoSearchUserException extends RuntimeException{
+   public NoSearchUserException() {;}
+   public NoSearchUserException(String message) {
+      super(message);
+   }
 }

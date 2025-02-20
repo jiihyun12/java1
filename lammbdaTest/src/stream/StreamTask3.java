@@ -8,41 +8,116 @@ import java.util.stream.IntStream;
 
 public class StreamTask3 {
 	public static void main(String[] args) {
+		System.out.println("1번 =====================================");
 //      1) 1~10까지 ArrayList에 담고 출력하기
 		ArrayList<Integer> numbers1 = new ArrayList<Integer>();
 		IntStream.rangeClosed(0, 10).forEach(n -> {numbers1.add(n);});
-		numbers1.forEach(num -> {System.out.println("1번 : " +num);});
+		numbers1.forEach(num -> {System.out.println(num);});
 //					// 값 받아서 -> 뭐 할건지
 		
 		
-//		
-		
+		System.out.println("2번 =====================================");
 //      2) 1~10을 ArrayList에 담고 홀수만 모두 출력하기
 		ArrayList<Integer> isOdd = new ArrayList<Integer>();
 		IntStream.rangeClosed(1, 10)
-		.filter(n->n%2==1)
-		.forEach(num -> System.out.println( "2번 : " + num));
+		.filter(n-> n % 2 == 1)
+		.forEach(num -> System.out.println(num));
 		
+		
+		
+		System.out.println();
+		System.out.println("3번 =====================================");
 //      3) 1~10까지 ArrayList에 짝수만 담고 출력하기
 		ArrayList<Integer> isEven = new ArrayList<Integer>();
 		IntStream.rangeClosed(1, 10)
-		.filter(n->n%2==0)
-		.forEach(num -> System.out.println( "3번 : " + num));
+		.filter(n-> n % 2==0)
+		.forEach(num -> System.out.println(num));
 		
+		
+		System.out.println();
+		System.out.println("4번 =====================================");
 //      4) a~z까지 ArrayList에 담고 출력하기
-//		4-1) a~z까지 A~Z로 변경해서 출력하기
+		ArrayList<Character> array = new ArrayList<Character>();
+		IntStream.rangeClosed('a', 'z')	
+//		.forEach(System.out::println);
+		.forEach((i)->array.add((char)i));
+		System.out.println(array);
 		
+		
+		System.out.println();
+		System.out.println("4-1번 =====================================");
+//		4-1) a~z까지 A~Z로 변경해서 출력하기
+		 ArrayList<Character> upperArray = new ArrayList<Character>();
+	     array.forEach(c -> upperArray.add((char) (c - 32)));
+	     System.out.println(upperArray);
+		
+		
+		
+		System.out.println();
+	    System.out.println("5번 =====================================");
 //      5) a~z까지 ex) aceg... 하나씩 건너뛰고 ArrayList에 담고 출력하기
+		 ArrayList<Character> printEvenAlphabet = new ArrayList<Character>();
+		 IntStream.rangeClosed('a', 'z')
+	     .filter(i -> (i - 1) % 2 == 0) 
+	     .forEach(i -> printEvenAlphabet.add((char) i));
+	      System.out.println(printEvenAlphabet);
+		
+		
+			System.out.println();
+	      System.out.println("6번 =====================================");
 //      6) 1~30까지 ArrayList에 담고 10~20만 출력하기
-//      7) 1~10까지 ArrayList에 담고 짝수만 모두 더해서 출력하기
-//      8) "hello", "java", "apple", "test" 문자열들을 ArrayList에 담고 'a'를 포함하고 있는 단어만 출력하기
+//		ArrayList<Integer print>
+	    ArrayList<Integer> addArrList = new ArrayList<Integer>();
+	    IntStream.rangeClosed(1, 30)
+	    .filter((i)-> 10<=i && 20>=i)
+	    .forEach(System.out::println);
+	      
+	    
+		System.out.println();
+	    System.out.println("7번 =====================================");
+//      7) 1~10까지 ArrayList에 담고 짝수만 모두 더해서 출력하기      
+		ArrayList<Integer> addEven = new ArrayList<Integer>();
+		IntStream.rangeClosed(1, 10)
+		.filter(n -> n % 2 == 0)
+//		.reduce(0, (a,b)->a + b);
+		.forEach(n -> addEven.add(n));
+//		Optional<Integer> result = addEven.stream().reduce((a,b)->a + b); 
+		int result = addEven.stream().reduce(0,(a,b)->a + b); 
+		System.out.println( result );
+		
+		
+		System.out.println();
+		System.out.println("8번 =====================================");
+//      8) "hello", "java", "apple", "test" 문자열들을 ArrayList에 담고 'a'를 포함하고 있는 단어만 출력하기	
+		    // 문자열 리스트
+		 ArrayList<String> words = new ArrayList<>(Arrays.asList("hello", "java", "apple", "test"));
+	        words.stream()
+	        .filter(word -> word.contains("a"))
+	        .forEach(System.out::println);
+
+		
+			System.out.println();
+	        System.out.println("9번 =====================================");
 //      9) 1~10까지 ArrayList에 담고 모든 합을 출력하기
+	        ArrayList<Integer> printNums = new ArrayList<Integer>();
+	        IntStream.rangeClosed(1, 10)
+	        .forEach((d)-> printNums.add(d));
+	        int resultD = printNums.stream().reduce(0,(a,b)->a+b);
+	        System.out.println( + resultD);
+	
+	        
+			System.out.println();
+	        System.out.println("10번 =====================================");
 //      10) ArrayList에 있는 모든 값을 더한 후 출력 {10, 20, 30, 40, 50, 60}
 		ArrayList<Integer> task = new ArrayList<Integer>(Arrays.asList(10, 20, 30, 40, 50, 60));
-		Optional<Integer> data = task.stream().reduce((a,b)->a + b);
-		System.out.println("10번 : " + data);
+//		Optional<Integer> data = task.stream().reduce((a,b)->a + b); // 리듀스
+		int data = task.stream().reduce(0,(a,b)->a + b); // 리듀스
+		System.out.println(data);
 		
 		
+		
+		System.out.println();
+		System.out.println("2) =====================================");
 //	      2) 각각의 Member가 들어가 있는 ArrayList<Member>가 존재한다.
 //	      모든 Member의 취미를 검토하여, 개발을 좋아하는 사람의 데이터를 출력한다.
 //
@@ -69,8 +144,7 @@ public class StreamTask3 {
 //			.forEach(System.out::println);
 		 members.stream()
          .filter(member -> member.getHobby().contains("개발"))
-         .forEach(System.out::println);
-         
+         .forEach(System.out::println);      
 						
 	}
 
