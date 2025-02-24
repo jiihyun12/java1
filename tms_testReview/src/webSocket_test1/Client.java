@@ -1,4 +1,4 @@
-package chat02;
+package webSocket_test1;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -9,20 +9,17 @@ import java.net.Socket;
 import java.net.UnknownHostException;
 import java.util.Scanner;
 
-public class Client02 {
-	public static void main(String[] args) throws IOException{
+public class Client {
+	
+	public static void main(String[] args) throws IOException {
 		Socket clientSocket = null;
 		BufferedReader in = null;
-//		PrintWriter writer = null;
-//		양방향 통신을 할 때는 Buffer
 		BufferedWriter out = null;
 		Scanner sc = new Scanner(System.in);
 		
-//		String serverIP = "192.168.181.2";
-		String serverIP = "localhost";  // 내가 나한테 접속할 때
+		String serverIP = "localhost";
 		
 		try {
-//			IP, port
 			clientSocket = new Socket(serverIP, 7777);
 			System.out.println("서버와 연결되었습니다.");
 			
@@ -37,14 +34,13 @@ public class Client02 {
 				out.flush();
 				
 				String inMessage = in.readLine();
-				System.out.println("서버 >>" + inMessage);
+				System.out.println("서버 >> " + inMessage);
 			}
-			
 		} catch (UnknownHostException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
-		} finally {
+		}finally {
 			if(sc != null) {
 				sc.close();
 			}
@@ -57,16 +53,7 @@ public class Client02 {
 			if(clientSocket != null) {
 				clientSocket.close();
 			}
-		}		
-		
+		}
 	}
+
 }
-
-
-
-
-
-
-
-
-

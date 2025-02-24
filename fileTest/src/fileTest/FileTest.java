@@ -19,7 +19,7 @@ public class FileTest{
       BufferedWriter bufferedWriter = null;
       try {
          bufferedWriter = new BufferedWriter(new FileWriter("text.txt", true));
-         bufferedWriter.write(" 함지현 !!");
+         bufferedWriter.write(" 홍길동 !!");
          bufferedWriter.close();
       } catch (IOException e) {
          // TODO Auto-generated catch block

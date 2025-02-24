@@ -35,7 +35,7 @@ public class Server {
 			
 			String message = reader.readLine();
 			
-			System.out.println("클라이언트에게 받은 메세지" + message);
+			System.out.println("클라이언트에게 받은 메세지 \n" + message);
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

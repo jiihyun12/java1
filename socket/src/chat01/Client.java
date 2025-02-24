@@ -14,7 +14,7 @@ public class Client {
 		PrintWriter writer = null;
 		
 	
-	String serverIP = "192.168.181.2";
+	String serverIP = "192.168.45.66";
 	try {
 		socket = new Socket(serverIP, 1100);
 		System.out.println("서버와 연결되었습니다.");
