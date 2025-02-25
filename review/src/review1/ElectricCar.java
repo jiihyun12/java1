@@ -49,10 +49,11 @@ public class ElectricCar extends Car {
 		batteryLevel += 50;
 	}
 	
-	public void showInfo(){
+	@Override
+	public void showInfo(){	
 		System.out.println(
-				brand + " 속도 증가!\n" + "현재 속도 : " + speed + "km \n"
-				+ brand + "배터리 충전됨 ! \n" + "현재 배터리" + batteryLevel + "%"
+				brand + " 속도 증가!\n" + "현재 속도 : " + speed + "km \n"+
+				brand + "배터리 충전됨 ! \n" + "현재 배터리" + batteryLevel + "%"
 		);
 	}	
 }

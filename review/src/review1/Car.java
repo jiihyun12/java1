@@ -57,5 +57,12 @@ public class Car {
 		speed += 10;
 	}
 	
-	 
+	public void showInfo(){
+		System.out.println(
+				brand + " 속도 증가!\n" + "현재 속도 : " + speed + "km \n"
+		);
+	}
 }
+	
+	 
+
