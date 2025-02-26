@@ -19,6 +19,13 @@ public class Review2 {
 //					프로그램이 종료된다.
 	
 	
+public void price() {
+	한 곡 = 300원;
+	if() {
+		
+	}
+	return 잔돈
+}
 	
 	
 
