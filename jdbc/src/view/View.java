@@ -50,7 +50,7 @@ public class View {
       
 //      회원 탈퇴
       
-      memberDAO 
+//      memberDAO 
 		
 		
 	}
